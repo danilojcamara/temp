@@ -42,6 +42,7 @@ df['meanhat'] = savgol_filter(df['mean'], 51, 3)
 df['n'] = df.index.astype(int)
 df['second'] = df['n'].apply(lambda x: x/fps)
 df['time'] = df['second'].apply(lambda x: timedelta(seconds=x))
-
+#%%
+df
 #%%
 df.plot(x='second', y='meanhat')
